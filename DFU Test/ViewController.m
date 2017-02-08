@@ -51,7 +51,7 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0), ^{
         if(_cb!=nil)return;
         _bleWork=[NSMutableArray new];
-        _S_YOKY=[CBUUID UUIDWithString:@"180A"];_S_DFU=[CBUUID UUIDWithString:@"00001530-1212-EFDE-1523-785FEABCD123"];
+        _S_YOKY=[CBUUID UUIDWithString:@"c4215555-3739-ffea-0a7d-802211f186b8"];_S_DFU=[CBUUID UUIDWithString:@"00001530-1212-EFDE-1523-785FEABCD123"];
     
        // _C_DFUPacket=[CBUUID UUIDWithString:@"00001532-1212-EFDE-1523-785FEABCD123"];
         _C_DFUPacket=[CBUUID UUIDWithString:@"00001531-1212-EFDE-1523-785FEABCD123"];
