@@ -51,7 +51,8 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0), ^{
         if(_cb!=nil)return;
         _bleWork=[NSMutableArray new];
-        _S_YOKY=[CBUUID UUIDWithString:@"c4215555-3739-ffea-0a7d-802211f186b8"];_S_DFU=[CBUUID UUIDWithString:@"00001530-1212-EFDE-1523-785FEABCD123"];
+        _S_YOKY=[CBUUID UUIDWithString:@"c4215555-3739-ffea-0a7d-802211f186b8"];
+        _S_DFU=[CBUUID UUIDWithString:@"00001530-1212-EFDE-1523-785FEABCD123"];
     
        // _C_DFUPacket=[CBUUID UUIDWithString:@"00001532-1212-EFDE-1523-785FEABCD123"];
         _C_DFUPacket=[CBUUID UUIDWithString:@"00001531-1212-EFDE-1523-785FEABCD123"];
@@ -377,6 +378,7 @@
         }
     }
 }
+
 -(void)initiateDfu {
     
     NSLog(@"Initiate DFU");
@@ -393,6 +395,26 @@
     // initiator.peripheralSelector = ... // the default selector is used
     
     DFUServiceController *controller = [initiator start];
+}
+
+- (void)dfuStateDidChangeTo:(enum DFUState)state {
+#warning HACK - This wasn't implemented, please add your own logic here
+    NSLog(@"%s <--not implemented!", __PRETTY_FUNCTION__);
+}
+
+- (void)dfuError:(enum DFUError)error didOccurWithMessage:(NSString * _Nonnull)message {
+#warning HACK - This wasn't implemented, please add your own logic here
+    NSLog(@"%s <--not implemented!", __PRETTY_FUNCTION__);
+}
+
+-(void)dfuProgressDidChangeFor:(NSInteger)part outOf:(NSInteger)totalParts to:(NSInteger)progress currentSpeedBytesPerSecond:(double)currentSpeedBytesPerSecond avgSpeedBytesPerSecond:(double)avgSpeedBytesPerSecond {
+#warning HACK - This wasn't implemented, please add your own logic here
+    NSLog(@"%s <--not implemented!", __PRETTY_FUNCTION__);
+}
+
+- (void)logWith:(enum LogLevel)level message:(NSString * _Nonnull)message {
+#warning HACK - This wasn't implemented, please add your own logic here
+    NSLog(@"%s <--not implemented!", __PRETTY_FUNCTION__);
 }
 
 -(NSURL*)getBundledFirmwareURLHelper {
