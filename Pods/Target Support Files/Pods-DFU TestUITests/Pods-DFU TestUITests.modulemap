@@ -1,0 +1,6 @@
+framework module Pods_DFU_TestUITests {
+  umbrella header "Pods-DFU TestUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

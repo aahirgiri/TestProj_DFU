@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BleWorker.h"
+#import "iOSDFULibrary-Swift.h"
 
-@interface ViewController : UIViewController
+
+@interface ViewController : UIViewController <CBCentralManagerDelegate, CBPeripheralDelegate, DFUServiceDelegate, DFUProgressDelegate, LoggerDelegate>
 
 
 @end
